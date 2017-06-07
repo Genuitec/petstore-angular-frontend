@@ -1,0 +1,11 @@
+export * from './CategoryApi';
+import { CategoryApi }  from './CategoryApi';
+export * from './CountryApi';
+import { CountryApi }  from './CountryApi';
+export * from './CustomerApi';
+import { CustomerApi }  from './CustomerApi';
+export * from './ItemApi';
+import { ItemApi }  from './ItemApi';
+export * from './ProductApi';
+import { ProductApi }  from './ProductApi';
+export const APIS = [ CategoryApi, CountryApi, CustomerApi, ItemApi, ProductApi, ];

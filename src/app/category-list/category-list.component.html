@@ -1,0 +1,7 @@
+
+<strong *ngIf="categories.length == 0">Loading categories</strong>
+<ul *ngIf="categories.length > 0">
+	<li *ngFor="let category of categories"><h3>
+		<a [routerLink]="'category/' + category.id" 
+			routerLinkActive="active">{{category.name}}</a></h3>
+</ul>

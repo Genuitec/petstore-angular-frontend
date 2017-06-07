@@ -6,15 +6,17 @@ import { CategoryListComponent } from './category-list/category-list.component';
 import { APIS, BASE_PATH } from './rest';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
+import { ProductListComponent } from './product-list/product-list.component';
 
 const appRoutes: Routes = [
-  // { path: 'category/:id', component:  }
+  { path: 'category/:id', component: ProductListComponent }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,

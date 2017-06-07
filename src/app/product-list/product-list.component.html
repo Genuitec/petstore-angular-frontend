@@ -1,0 +1,6 @@
+<strong *ngIf="products.length == 0">Loading</strong>
+<ul *ngIf="products.length > 0">
+	<li *ngFor="let product of products">
+		{{product.name}} - <em>{{product.description}}</em>
+
+</ul>

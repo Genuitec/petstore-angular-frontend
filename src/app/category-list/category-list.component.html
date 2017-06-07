@@ -1,7 +1,13 @@
-
-<strong *ngIf="categories.length == 0">Loading categories</strong>
-<ul *ngIf="categories.length > 0">
-	<li *ngFor="let category of categories"><h3>
-		<a [routerLink]="'category/' + category.id" 
-			routerLinkActive="active">{{category.name}}</a></h3>
-</ul>
+<div class="panel panel-success">
+	<div class="panel-heading">
+		Categories
+	</div>
+	<div class="panel-body">
+		<strong *ngIf="categories.length == 0">Loading...</strong>
+		<ul *ngIf="categories.length > 0" class="nav nav-pills nav-stacked">
+			<li *ngFor="let category of categories" routerLinkActive="active">
+				<a [routerLink]="'category/' + category.id">{{category.name}}</a>
+			</li>
+		</ul>
+	</div>
+</div>

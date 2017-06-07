@@ -1,6 +1,15 @@
-<strong *ngIf="products.length == 0">Loading</strong>
-<ul *ngIf="products.length > 0">
-	<li *ngFor="let product of products">
-		{{product.name}} - <em>{{product.description}}</em>
+<div class="panel panel-info">
+	<div *ngIf="products.length > 0" class="panel-heading">
+		Products for category {{products[0].category.name}}
+	</div>
+	<div class="panel-body">
+		<strong *ngIf="products.length == 0">Loading</strong>
+		
+		<table *ngIf="products.length > 0" class="table table-striped table-hover">
+			<tr *ngFor="let product of products">
+				<td>{{product.name}}</td> <td><em>{{product.description}}</em></td>
+			</tr>
+		</table>
+	</div>
 
-</ul>
+</div>
